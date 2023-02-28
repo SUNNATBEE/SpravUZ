@@ -1,0 +1,182 @@
+.site-header{
+    padding-bottom: 25px;
+    border-bottom: 2px solid #F5F5F5;
+}
+.site-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.site-header__logo {
+    width: 134px;
+    height: 27px;
+}
+.site-header__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+}
+.site-header__list::after{
+    background-image: url("../images/circle.png");
+    background-repeat: no-repeat;
+    display: block;
+    content: "";
+    width: 19px;
+    height: 3px;
+    margin-left: 15px;
+}
+.site-header__item{
+    display: flex;
+    align-items: center;
+}
+.site-header__item:nth-child(1)::before{
+    background-image: url("../images/arrow-bottom.svg");
+    background-repeat: no-repeat;
+    display: block;
+    content: "";
+    width: 7px;
+    height: 4px;
+    margin-right: 5px;
+}
+.site-header__item:nth-child(2){
+    display: none;
+}
+.site-header__item:nth-child(3){
+    display: none;
+}
+.site-header__language {
+    font-size: 12px;
+    line-height: 140%;
+    color: #1f1f24;
+}
+.site-header__language--main{
+    color: #8e8e91
+}
+.site-header__form {
+    display: flex;
+    align-items: center;
+}
+.site-header__btn {
+    background-image: url("../images/burger.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+    border: none;
+    width: 25px;
+    height: 17px;
+}
+.site-header__inputs-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #0AA9B4;
+    margin-left: 17px;
+    border-radius: 5px;
+}
+.site-header__region {
+    background-color: #f7fcfc;
+    border-right: 2px solid #0AA9B4;
+    padding:  10px 28px 12px 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+}
+.site-header__region-name {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 140%;
+    color: #1f1f24;
+    margin: 0;
+    
+}
+.site-header__region-name::after{
+    background-image: url("../images/arrow-bottom.svg");
+    background-repeat: no-repeat;
+    background-size: 8px 4px;
+    display: block;
+    width: 8px;
+    height: 4px;
+    content: "";
+    margin-left: 11px;
+}
+.site-header__input-search{
+    border: none;
+    padding-left: 10px;
+    outline: none;
+}
+.site-header__input-search::placeholder {
+    font-size: 12px;
+    line-height: 140%;
+    color: #1F1F24;
+}
+@include mobile-first(768px){
+    .container{
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .site-header__wrapper{
+        margin-top: 12px;
+    }
+    .site-header__logo{
+        width: 225px;
+        height: 46px;
+    }
+    .site-header__language{
+        font-size: 18px;
+    }
+    .site-header__list::after{
+        display: none;
+    }
+    .site-header__item:not(:first-child){
+        margin-left: 10px;
+    }
+    .site-header__item:nth-child(1)::before{
+        display: none;
+    }
+    .site-header__item:nth-child(2){
+        display: block;
+    }
+    .site-header__item:nth-child(3){
+        display: block;
+    }
+    .site-header__region{
+        padding: 20px 31px 23px 25px;
+    }
+    .site-header__region-name{
+        font-size: 18px;
+    }
+    .site-header__region-name::after{
+        width: 10px;
+        height: 6px;
+        margin-left: 67px;
+    }
+    .site-header__btn{
+        background-size: 40px 32px;
+        width: 40px;
+        height: 32px;
+    }
+    .site-header__input-search{
+        padding-left: 25px;
+    }
+    .site-header__input-search::placeholder {
+        font-size: 18px;
+    }
+    .site-header__inputs-wrapper::after{
+        position: absolute;
+        right: 25px;
+        background-position: center center;
+        background-size: contain;
+        background-image: url("../images/search.svg");
+        background-repeat: no-repeat;
+        display: inline-block;
+        content: "";
+        width: 20px;
+        height: 20px;
+    }
+}
